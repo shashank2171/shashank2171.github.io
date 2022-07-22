@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Spotify - Your favourite music is here</title>
+        <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://apis.google.com/js/api.js"></script>
+        <script src="./scripts/main.js"></script>
+        </head>
+<body onload="loadClient()">
+    <div>
+        <nav>
+            <ul>
+                <li class="brand"><img src="./images/logo.png" alt="Spotify"> Spotify</li>
+                <li>Home</li>
+                <li>About</li>
+                <li>
+                    <input id="search" type="text" placeholder="            Search.." name="search">
+                    <button type="submit" onclick="getQ();  execute();"><i class="fa fa-search"></i></button>
+                </li>
+    
+                
+            </ul>
+        </nav>
+    </div>
+
+    <iframe 
+        id="video" height="50" width="320" src="https://www.youtube.com/embed/aIXOyOLkb24?enablejsapi=1&html5=1" frameborder="0" allowfullscreen>
+    </iframe>
+
+    <div class="container">
+        <div class="songList">
+            <h1 id="heading">Best of NCS - No Copyright Sounds</h1>
+            <div class="songItemContainer">
+                <div class="songItem">
+                    <img id="img_0" alt="1">
+                    <span id="h3_0" class="songName">Let me Love You</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="0" class="far songItemPlay fa-play-circle" onclick="change(0); if(flag==true){prog();}"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img id="img_1" alt="1">
+                    <span id="h3_1" class="songName">Let me Love You</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="1" class="far songItemPlay fa-play-circle" onclick="change(1); if(flag==true){prog();}"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img id="img_2" alt="1">
+                    <span id="h3_2" class="songName">Let me Love You</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="2" class="far songItemPlay fa-play-circle" onclick="change(2); if(flag==true){prog();}"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img id="img_3" alt="1">
+                    <span id="h3_3" class="songName">Let me Love You</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="3" class="far songItemPlay fa-play-circle" onclick="change(3); if(flag==true){prog();}"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img id="img_4" alt="1">
+                    <span id="h3_4" class="songName">Let me Love You</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="4" class="far songItemPlay fa-play-circle" onclick="change(4); if(flag==true){prog();}"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img id="img_5" alt="1">
+                    <span id="h3_5" class="songName">Let me Love You</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="5" class="far songItemPlay fa-play-circle" onclick="change(5); if(flag==true){prog();}"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img id="img_6" alt="1">
+                    <span id="h3_6" class="songName">Let me Love You</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="6" class="far songItemPlay fa-play-circle" onclick="change(6); if(flag==true){prog();}"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img id="img_7" alt="1">
+                    <span id="h3_7" class="songName">Let me Love You</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="7" class="far songItemPlay fa-play-circle" onclick="change(7); if(flag==true){prog();}"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img id="img_8" alt="1">
+                    <span id="h3_8" class="songName">Let me Love You</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="8" class="far songItemPlay fa-play-circle" onclick="change(8); if(flag==true){prog();}"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img id="img_9" alt="1">
+                    <span id="h3_9" class="songName">Let me Love You</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="9" class="far songItemPlay fa-play-circle" onclick="change(9); if(flag==true){prog();}"></i> </span></span>
+                </div>
+            </div>
+        </div>
+        <div class="songBanner"></div>
+    </div>
+
+    <div class="bottom">
+        <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
+        <div class="icons">
+            <!-- fontawesome icons -->
+            <i class="fas fa-3x fa-step-backward" id="previous"></i>
+            <i class="far fa-3x fa-play-circle" id="masterPlay"></i>
+            <i class="fas fa-3x fa-step-forward" id="next"></i> 
+        </div>
+        <div class="songInfo">
+            <img src="./images/playing.gif" width="42px" alt="" id="gif"> <span id="masterSongName">Warriyo - Mortals [NCS Release]</span>
+        </div>
+    </div>
+    <script src="./scripts/script.js"></script>
+    <script src="https://kit.fontawesome.com/26504e4a1f.js" crossorigin="anonymous"></script>
+</body>
+</html>
