@@ -16,7 +16,7 @@ function getQ(){
 }
 
 function loadClient() {
-    gapi.client.setApiKey("AIzaSyCcbluSLE7WklV90tueJYIriT35Yv6MyIw");
+    gapi.client.setApiKey("AIzaSyAckppQylvaU9PC4AnyrCSvcnQ2vgyNKfE");
     return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
         .then(function() { console.log("GAPI client loaded for API"); },
               function(err) { console.error("Error loading GAPI client for API", err); });
@@ -64,7 +64,7 @@ function print(){
 }
 
 function change(i){
-    
+    audioElement.pause();
     async function alter(){
         document.getElementById("video").src = "https://www.youtube.com/embed/"+json.items[i].id.videoId+"?enablejsapi=1&html5=1";
         document.getElementById("masterSongName").innerHTML = json.items[i].snippet.title;

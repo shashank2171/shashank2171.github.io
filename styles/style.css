@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+@font-face {
+    font-family: "Font";
+    src: url("./Fave-ScriptBoldPro.ttf") format("truetype");
+}
 body{
     background-image: linear-gradient(to right, #ca12c4, #06becf);
 
@@ -43,6 +48,7 @@ nav ul li{
 
 #search {
     padding: 10px;
+    flex: right;
     font-size: 15px;
     border: 2px solid rgb(0, 214, 214);
     border-right: none;
@@ -207,3 +213,20 @@ a{
 .containerAbout ul{
     margin: 20px;
 }
+
+#slogan1{
+    padding-left: 35vh;
+    padding-right: 50vh;
+    align-items: flex-end;
+    font-size: 50px;
+    font-family: "Font", sans-serif; 
+}
+
+#slogan2{
+    padding-left: 35vh;
+    padding-right: 30vh;
+    align-items: flex-end;
+    font-size: 50px;
+    font-family: "Font", sans-serif;
+}
+
