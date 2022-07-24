@@ -87,6 +87,7 @@ nav ul li{
     border-radius: 12px;
     padding: 34px;
     background-image: url('./bg.jpg');
+    box-shadow: 10px 10px 15px rgb(67, 67, 67);
 }
 
 .bottom{
@@ -208,6 +209,8 @@ a{
     padding: 34px;
     background-image: url('./bg.jpg');
     font-size: 20px;
+    box-shadow: 10px 10px 15px rgb(67, 67, 67);
+
 }
 
 .containerAbout ul{
