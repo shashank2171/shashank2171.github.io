@@ -5,10 +5,14 @@ var flag = false;
 var playStatus = false;
 
 function getQ(){
+
     s=document.querySelector("#search").value;
     document.getElementById("heading").innerHTML = "Searched for: "+s;
     s=s+" song";
     console.log(s);
+    makeAllPlays();
+    duration();
+    songIndex=10;
 }
 
 function loadClient() {
@@ -70,15 +74,39 @@ function change(i){
     async function play(){
         await alter();
         setTimeout(() => {
-            total = player.getDuration();
             player.playVideo();
             playStatus=true;
+            makeAllPlays();
             masterPlay.classList.remove('fa-play-circle');
             masterPlay.classList.add('fa-pause-circle');
             gif.style.opacity = 1;
+            currSong.target.classList.remove('fa-play-circle');
+            currSong.target.classList.add('fa-pause-circle');
         }, 1000);
     }
-    play();
+    if(playStatus && songIndex==i && pnext==false){
+        player.pauseVideo();
+        playStatus=false;
+        masterPlay.classList.remove('fa-pause-circle');
+        masterPlay.classList.add('fa-play-circle');
+        gif.style.opacity = 0;
+        makeAllPlays();
+    }
+    else{
+        if(songIndex==i && pnext==false){
+            playStatus=true;
+            player.playVideo();
+            masterPlay.classList.remove('fa-play-circle');
+            masterPlay.classList.add('fa-pause-circle');
+            currSong.target.classList.remove('fa-play-circle');
+            currSong.target.classList.add('fa-pause-circle');
+        }
+        else{
+            pnext=false;
+            play();
+        }
+    }
+    
 }
 
 
@@ -121,3 +149,5 @@ var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/player_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+

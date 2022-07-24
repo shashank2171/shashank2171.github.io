@@ -1,16 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 body{
-    background-color: antiquewhite;
+    background-image: linear-gradient(to right, #ca12c4, #06becf);
+
 }
 
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 nav{
     font-family: 'Ubuntu', sans-serif;
+    text-shadow: 2px 5px 5px #bf14e5;
 }
 
 nav ul{
@@ -18,15 +21,16 @@ nav ul{
     align-items: center;
     list-style-type: none;
     height: 65px;
-    background-color: black;
+    background-image: linear-gradient(to right, black,black,#04a9b2,#05ebf8);
     color: white;
+    box-shadow: 0px 5px 20px rgb(67, 67, 67);
 }
 
 nav ul li{
     padding: 0 12px;
 }
 .brand img{
-    width: 44px;
+    width: 60px;
     padding: 0 8px;
 }
 
@@ -34,36 +38,62 @@ nav ul li{
     display: flex;
     align-items: center;
     font-weight: bolder;
-    font-size: 1.3rem;
+    font-size: 2.0rem;
 }
-.search{
-    width: 40px;
-    height: 20px;
+
+#search {
+    padding: 10px;
+    font-size: 15px;
+    border: 2px solid rgb(0, 214, 214);
+    border-right: none;
+    float: left;
+    width: 80%;
+    background:black;
+    color: white;
+    border-radius: 12px;
+    box-shadow: 2px 5px 5px #bf14e5;
 }
+
+#btn{
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #0033ff;
+    color: white;
+    font-size: 15px;
+    border: 2px solid rgb(0, 216, 216);
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 2px 5px 5px #bf14e5;
+    
+}
+
 
 .container{
     min-height: 72vh;
     background-color: black;
     color: white;
-   font-family: 'Varela Round', sans-serif;
-   display: flex;
-   margin: 23px auto;
-   width: 70%;
-   border-radius: 12px;
-   padding: 34px;
-   background-image: url('./bg.jpg');
+    font-family: 'Varela Round', sans-serif;
+    display: flex;
+    margin: 23px auto;
+    width: 70%;
+    border-radius: 12px;
+    padding: 34px;
+    background-image: url('./bg.jpg');
 }
 
 .bottom{
     position: sticky;
     bottom: 0;
     height: 130px;
-    background-color: black;
+    background-image: linear-gradient(black,black ,rgb(0, 127, 127));
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; 
+    flex-direction: column;
+    text-shadow: 2px 5px 5px #bf14e5;
 }
 
 .icons{
@@ -92,11 +122,12 @@ nav ul li{
     justify-content: space-between;
     align-items: center;
     border-radius: 34px;
+    box-shadow: 5px 5px 10px rgb(0, 255, 255);
 }
 
 .songItem img{
-    height: 45px;
-    width: 45px;
+    height: 44px;
+    width: 44px;
     margin: 0 23px;
     clip-path: circle();
 }
@@ -122,7 +153,7 @@ nav ul li{
 
 @media only screen and (max-width: 1100px) {
     body {
-      background-color: red;
+      background-image: linear-gradient(to right, #ca12c4, #06becf);
     }
 }
 
@@ -130,3 +161,49 @@ nav ul li{
     visibility: hidden;
 }
 
+#current{
+    padding-right: 30px;
+}
+
+#tot{
+    padding-left: 30px;
+}
+
+#masterSongName{
+    display: block;
+    width: 500px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.songName{
+    display: block;
+    width: 400px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.containerAbout{
+    min-height: 85vh;
+    background-color: black;
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    display: block;
+    margin: 23px auto;
+    width: 70%;
+    border-radius: 12px;
+    padding: 34px;
+    background-image: url('./bg.jpg');
+    font-size: 20px;
+}
+
+.containerAbout ul{
+    margin: 20px;
+}
