@@ -70,6 +70,7 @@ function change(i){
     async function play(){
         await alter();
         setTimeout(() => {
+            total = player.getDuration();
             player.playVideo();
             playStatus=true;
             masterPlay.classList.remove('fa-play-circle');

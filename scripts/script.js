@@ -86,7 +86,7 @@ myProgressBar.addEventListener('change', ()=>{
 
 function prog(){
 
-    total = player.getDuration();
+    
     function incrementSeconds() {
         
         seconds = player.getCurrentTime();
