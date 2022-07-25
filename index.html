@@ -11,18 +11,19 @@
         <script src="https://apis.google.com/js/api.js"></script>
         </head>
 <body onload="loadClient(); duration();">
-    <div>
+    <div class="topnav">
         <nav>
-            <ul>
-                <li class="brand"><a class="brand" href="./index.html"><img src="./images/logo.png" alt="Rythm"></a> Rhythm</a></li>
-                <li> <a class="it" href="./index.html">Home</a></li>
-                <li> <a class="it" href="./about.html">About</a></li>
-                <span id="slogan2"> <span style="color:rgb(0, 76, 255);">Dance</span> to the <span style="color:#ff04f7;">rhythm</span>  of your ❤️</span>
-                <li class="bar">
+            <div class="topnav-left">
+                <a class="brand" href="./index.html"><img src="./images/logo.png" alt="Rythm"> Rhythm</a>
+                <a class="it" href="./index.html">Home</a>
+                <a class="it" href="./about.html">About</a>
+            </div>
+            
+            <span id="slogan">Dance to the <span style="color:#ff04f7;">rhythm</span>  of your heart....</span>
+            <div class="topnav-right">
                     <input id="search" type="text" placeholder=" Search.." name="search">
                     <button id="btn" type="submit" onclick="getQ();  execute();"><i><i class="fa fa-search icon-2x"></i></button>
-                </li>
-            </ul>
+            </div>
         </nav>
     </div>
 

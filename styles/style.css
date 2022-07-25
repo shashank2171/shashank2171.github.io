@@ -16,43 +16,63 @@ body{
     box-sizing: border-box;
 }
 
-nav{
+.topnav{
     font-family: 'Ubuntu', sans-serif;
     text-shadow: 2px 5px 5px #bf14e5;
-}
-
-nav ul{
-    display: flex;
-    align-items: center;
-    list-style-type: none;
     height: 65px;
     background-image: linear-gradient(to right, black,black,#04a9b2,#05ebf8);
     color: white;
     box-shadow: 0px 5px 20px rgb(67, 67, 67);
+    list-style-type: none;
 }
 
-nav ul li{
-    padding: 0 12px;
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    
+    text-decoration: none;
+    align-items: center;
 }
+
+.it{
+    padding-top: 26px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    vertical-align: middle;
+}
+
+.topnav-right{
+    float: right;
+    display: flex;
+    padding-right: 5vh;
+    
+}
+
+nav ul{
+    
+    list-style-type: none;
+}
+
 .brand img{
     width: 60px;
     padding: 0 8px;
+    float: left;
 }
 
 .brand {
-    display: flex;
+    padding: 13px;
     align-items: center;
     font-weight: bolder;
     font-size: 2.0rem;
+    float: left;
 }
 
 #search {
+    margin-top: 15px;
     padding: 10px;
-    flex: right;
     font-size: 15px;
     border: 2px solid rgb(0, 214, 214);
     border-right: none;
-    float: left;
     width: 80%;
     background:black;
     color: white;
@@ -61,7 +81,7 @@ nav ul li{
 }
 
 #btn{
-    float: left;
+    margin-top: 15px;
     width: 20%;
     padding: 10px;
     background: #0033ff;
@@ -141,7 +161,9 @@ nav ul li{
 
 .timestamp{
     margin: 0 23px;
+    font-size: 20px;
 }
+
 
 .timestamp i{
     cursor: pointer;
@@ -178,7 +200,7 @@ nav ul li{
 
 #masterSongName{
     display: block;
-    width: 500px;
+    width: 60vh;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -217,19 +239,16 @@ a{
     margin: 20px;
 }
 
-#slogan1{
-    padding-left: 35vh;
-    padding-right: 50vh;
-    align-items: flex-end;
-    font-size: 50px;
-    font-family: "Font", sans-serif; 
-}
 
-#slogan2{
-    padding-left: 35vh;
-    padding-right: 30vh;
-    align-items: flex-end;
+
+#slogan{
+    padding-left: 15%;
     font-size: 50px;
     font-family: "Font", sans-serif;
+    
+}
+
+#pr{
+    font-size: 20px;
 }
 
